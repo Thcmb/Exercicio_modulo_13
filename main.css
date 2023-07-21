@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.menu {
+    background: rgba(0,0,0, 0.9);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0px 25px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+.menu h1 {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.busca input {
+    height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.busca {
+    position: relative;
+    display: inline-block;
+}
+
+.busca .fa-solid{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.icones {
+    text-align: right;
+}
+
+.icones .fa-solid{
+    color: #fff;
+    font-size: 22px;
+    padding: 0px 15px;
+    transition: transform 0.3s;
+}
+
+.icones .fa-solid:hover {
+    transform: scale(1.2);
+}
+
+.navbar {
+    background-color: rgb(215, 228, 39);
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu {
+    background-color: rgb(245, 252, 150);
+    border: 2px solid rgb(0,0,0);
+}
+
+.dropdown-menu a {
+    color: rgb(0,0,0);
+}
+
+.navbar .nav-link {
+    color: rgba(0,0,0, 0.9);
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.navbar .nav-link:hover {
+    transform: scale(1.1);
+}
+
+.menu-produtos h2 {
+    background-color: rgb(215, 228, 39);
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0px 0px
+}
+
+.produtos {
+    background-color: #fff;
+    text-align: center;
+}
+
+.produtos .card {
+    margin-top: 30px;
+    max-width: 320px;
+    background-color: #fff;
+    box-shadow: 1px 1px #ccc;
+    transition: transform 0.2s;
+    margin-bottom: 40px;
+}
+
+.produtos .card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.produtos img {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.produtos button {
+    width: 100%;
+    border: none;
+}
+
+.produtos button:hover {
+    background-color: #0e472d;
+    box-shadow: 1px 1px 1px 1px #0c4128;
+    border: none;
+}
+
+@media screen and (max-width: 767px ) {
+    .icones{
+        display: none;
+    }
+
+    .menu {
+        grid-template-columns: auto;
+        margin-bottom: 8px;
+        margin-top: 12px;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .nav-link:hover {
+        transform: none;
+        text-decoration:underline ;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .carousel-inner img {
+        width: 425px;
+        height: 196px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .produtos .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .titulo::before {
+        content: "EBAC";
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .titulo h1 {
+        display: none;
+    }
+    
+    .busca {
+        width: 400px;
+    }
+
+    .icones .fa-solid:hover {
+        transform: none;
+    }
+
+    .navbar ul {
+        font-size: 30px;
+        justify-content:center ;
+    }
+
+    .navbar .nav-link:hover {
+        transform: none;
+        text-decoration:underline ;
+    }
+
+    .carousel-inner img {
+        height: 290px;
+    }
+
+    .produtos .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
